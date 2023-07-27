@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<ul>
+    {% for e in Barcha_postlar %}
+    <li>{{e.text}}</li>
+    <li>{{e.email}}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+

@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, .body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.Django{
+    font-size: 25px;
+    color: blue;
+    text-decoration: none;
+}
+
+.title{
+    font-size: 30px;
+    color: blue;
+    text-decoration: none;
+}
+
+.body{
+    font-size: 20px;
+    color: chocolate;
+}
