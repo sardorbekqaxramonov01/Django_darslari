@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Post(models.Model):
@@ -6,6 +7,9 @@ class Post(models.Model):
     author = models.ForeignKey(
         'auth.user',on_delete=models.CASCADE,
     )
-    Body = models.TextField(max_length=255)
+    body = models.TextField(max_length=255)
     def __str__(self):
         return self.title
+    def get_absolute_url(self):
+        return reverse("contact", args=[str(self.id)])
+    
