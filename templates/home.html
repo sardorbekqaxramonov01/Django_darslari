@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static './css/style.css' %}">
 </head>
 <div class="body">
-    <h1><a class="title" href="">{{post.title}}</a></h1>
+    <h1><a class="title" href="{% url 'post_detail' post.pk%}">{{post.title}}</a></h1>
     <p class="body">{{post.body}}</p>
 </div>
 {%endfor%}
