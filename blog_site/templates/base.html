@@ -16,6 +16,14 @@
             <h1><a href="{%url 'post_new'%}">+Yangi post qo'shish</a></h1>
         </div>
     </header>
+    {% if user.is_authenticated %}
+    <p>{{user.username}}, saytga xush kelibsiz</p>
+    <p><a href="{% url 'logout' %}">Saytdan chiqish</a></p>
+    {% else %}
+    <p>Siz saytga kirmagansiz</p>
+    <a href="{% url 'login' %}">Log In</a>
+    <a href="{% url 'signup' %}">Ro'yxatdan o'tish</a>
+    {% endif %}
     <div>
         {%block content%}
 
