@@ -27,10 +27,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages.apps.PagesConfig',
+    # 'pages.apps.PagesConfig',
     # 'blog_site.apps.BlogSiteConfig',
-    # 'accounts.apps.AccountsConfig',
-    'users.apps.UsersConfig',
+    'accounts.apps.AccountsConfig',
+    # 'users.apps.UsersConfig',
+    'itpark.apps.ItparkConfig',
     "crispy_forms",
     "crispy_bootstrap4",
 ]
@@ -117,7 +118,7 @@ STATIC_URL = 'static/'
 # LOGIN_REDIRECT_URL = 'home'
 # LOGOUT_REDIRECT_URL = 'home'
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'itpark.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
